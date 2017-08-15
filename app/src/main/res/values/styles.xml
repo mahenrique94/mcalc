@@ -6,13 +6,4 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="CalculatorTheme" parent="AlertDialog.AppCompat">
-        <item name="android:screenOrientation">portrait</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-    </style>
-
 </resources>

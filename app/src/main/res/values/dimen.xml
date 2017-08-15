@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_size">35dp</dimen>
+    <dimen name="editor_size">50dp</dimen>
+    <dimen name="padding">10dp</dimen>
+</resources>
