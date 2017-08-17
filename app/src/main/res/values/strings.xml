@@ -14,6 +14,7 @@
     <string name="label_zero">0</string>
 
     <string name="label_ac">ac</string>
+    <string name="label_backspace">BS</string>
     <string name="label_divide">/</string>
     <string name="label_equals">=</string>
     <string name="label_multiply">x</string>
