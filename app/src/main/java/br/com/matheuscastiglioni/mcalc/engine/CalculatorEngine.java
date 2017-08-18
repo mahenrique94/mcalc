@@ -1,5 +1,8 @@
 package br.com.matheuscastiglioni.mcalc.engine;
 
+import android.util.Log;
+import android.widget.TextView;
+
 import br.com.matheuscastiglioni.mcalc.type.Operator;
 
 /**
@@ -8,8 +11,10 @@ import br.com.matheuscastiglioni.mcalc.type.Operator;
 
 public abstract class CalculatorEngine {
 
-    public static void process(Operator operator) {
-
+    public static void process(Object formula) {
+        for(int i = 0; i < formula.toString().length(); i++) {
+            Log.d("[Engine] => ", "Process: " + formula.toString().charAt(i));
+        }
     }
 
 }

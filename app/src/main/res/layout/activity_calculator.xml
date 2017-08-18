@@ -59,17 +59,17 @@
                     android:textAlignment="center"
                     android:textColor="@color/color_text_alt"
                     android:textSize="@dimen/button_size"
-                    android:layout_weight="1"
+                    android:layout_weight="2"
                     android:layout_width="0dp"/>
 
                 <Button
                     android:background="@color/color_third"
                     android:gravity="center"
                     android:layout_height="fill_parent"
-                    android:id="@+id/btnCalculator_percentage"
+                    android:id="@+id/btnCalculator_backspace"
                     android:layout_marginRight="@dimen/padding"
                     android:padding="@dimen/padding_button"
-                    android:text="@string/label_percentage"
+                    android:text="@string/label_backspace"
                     android:textAlignment="center"
                     android:textColor="@color/color_text_alt"
                     android:textSize="@dimen/button_size"
@@ -81,22 +81,8 @@
                     android:gravity="center"
                     android:layout_height="fill_parent"
                     android:id="@+id/btnCalculator_divive"
-                    android:layout_marginRight="@dimen/padding"
                     android:padding="@dimen/padding_button"
                     android:text="@string/label_divide"
-                    android:textAlignment="center"
-                    android:textColor="@color/color_text_alt"
-                    android:textSize="@dimen/button_size"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"/>
-
-                <Button
-                    android:background="@color/color_third"
-                    android:gravity="center"
-                    android:layout_height="fill_parent"
-                    android:id="@+id/btnCalculator_backspace"
-                    android:padding="@dimen/padding_button"
-                    android:text="@string/label_backspace"
                     android:textAlignment="center"
                     android:textColor="@color/color_text_alt"
                     android:textSize="@dimen/button_size"

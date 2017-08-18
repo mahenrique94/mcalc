@@ -1,5 +1,6 @@
 package br.com.matheuscastiglioni.mcalc.factory;
 
+import br.com.matheuscastiglioni.mcalc.model.Number;
 import br.com.matheuscastiglioni.mcalc.operator.Sum;
 import br.com.matheuscastiglioni.mcalc.type.Operator;
 
@@ -10,7 +11,7 @@ import br.com.matheuscastiglioni.mcalc.type.Operator;
 public abstract class OperatorFactory {
 
     public static Operator findOperatorTo(Operator left, Operator right, Object operator) {
-        return new Sum(left, right).take(operator);
+        return new Number(0);
     }
 
 }

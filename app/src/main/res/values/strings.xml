@@ -18,7 +18,6 @@
     <string name="label_divide">/</string>
     <string name="label_equals">=</string>
     <string name="label_multiply">x</string>
-    <string name="label_percentage">%</string>
     <string name="label_sum">+</string>
     <string name="label_subtract">-</string>
 </resources>

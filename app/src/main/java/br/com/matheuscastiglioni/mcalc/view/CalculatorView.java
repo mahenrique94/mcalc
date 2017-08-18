@@ -11,8 +11,17 @@ import br.com.matheuscastiglioni.mcalc.validator.CalculatorValidator;
 public abstract class CalculatorView {
 
     public static void updateResult(TextView result, Object key) {
-        if (CalculatorValidator.resultAnKeyAreValids(result, key))
+        if (CalculatorValidator.resultAnKeyAreValids(result, key)) {
+            if (CalculatorValidator.resultIsZero(result))
+                CalculatorView.clear(result);
+            if (CalculatorValidator.keyIsDot(key) && !CalculatorValidator.checkResultHasNumber(result))
+                key = "0" + key;
             result.setText(result.getText() + key.toString());
+        }
+    }
+
+    public static void setResult(TextView result, Object value) {
+        result.setText(value.toString());
     }
 
     public static void clear(TextView result) {
@@ -20,7 +29,8 @@ public abstract class CalculatorView {
     }
 
     public static void erase(TextView result) {
-        result.setText(result.getText().toString().substring(0, result.getText().toString().length() - 1));
+        if (CalculatorValidator.checkResultHasNumber(result))
+            result.setText(result.getText().toString().substring(0, result.getText().toString().length() - 1));
     }
 
 }
