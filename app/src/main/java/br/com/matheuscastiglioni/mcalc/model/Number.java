@@ -8,24 +8,24 @@ import br.com.matheuscastiglioni.mcalc.type.Operator;
 
 public class Number implements Operator {
 
-    private final int number;
+    private final double number;
 
-    public Number(int number) {
+    public Number(double number) {
         this.number = number;
     }
 
     @Override
-    public int process() {
+    public double process() {
         return this.number;
     }
 
     @Override
     public Operator take(Object operator) {
-        return next();
+        return next(operator);
     }
 
     @Override
-    public Operator next() {
+    public Operator next(Object operator) {
         throw new RuntimeException("Operator has been not found");
     }
 }

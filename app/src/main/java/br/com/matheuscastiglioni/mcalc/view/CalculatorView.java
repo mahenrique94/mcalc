@@ -14,7 +14,9 @@ public abstract class CalculatorView {
         if (CalculatorValidator.resultAnKeyAreValids(result, key)) {
             if (CalculatorValidator.resultIsZero(result))
                 CalculatorView.clear(result);
-            if (CalculatorValidator.keyIsDot(key) && !CalculatorValidator.checkResultHasNumber(result))
+            if ((CalculatorValidator.keyIsDot(key) && !CalculatorValidator.checkResultHasNumber(result))
+                    || (CalculatorValidator.keyIsDot(key) && CalculatorValidator.resultEndsWithOperator(result))
+                    || (CalculatorValidator.resultEndsWithDot(result) && CalculatorValidator.keyIsOperator(key)))
                 key = "0" + key;
             result.setText(result.getText() + key.toString());
         }

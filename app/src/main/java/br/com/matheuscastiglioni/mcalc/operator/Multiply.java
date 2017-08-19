@@ -17,19 +17,19 @@ public class Multiply implements Operator {
     }
 
     @Override
-    public int process() {
+    public double process() {
         return this.left.process() * this.right.process();
     }
 
     @Override
     public Operator take(Object operator) {
-        if (operator.toString().equals("*"))
+        if (operator.toString().equals("x"))
             return this;
-        return next();
+        return next(operator);
     }
 
     @Override
-    public Operator next() {
-        return new Divide(this.left, this.right);
+    public Operator next(Object operator) {
+        return new Divide(this.left, this.right).take(operator);
     }
 }

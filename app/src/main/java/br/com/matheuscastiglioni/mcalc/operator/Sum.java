@@ -18,7 +18,7 @@ public class Sum implements Operator {
     }
 
     @Override
-    public int process() {
+    public double process() {
         return this.left.process() + this.right.process();
     }
 
@@ -26,11 +26,11 @@ public class Sum implements Operator {
     public Operator take(Object operator) {
         if (operator.toString().equals("+"))
             return this;
-        return next();
+        return next(operator);
     }
 
     @Override
-    public Operator next() {
-        return new Subtract(this.left, this.right);
+    public Operator next(Object operator) {
+        return new Subtract(this.left, this.right).take(operator);
     }
 }

@@ -6,8 +6,8 @@ package br.com.matheuscastiglioni.mcalc.type;
 
 public interface Operator {
 
-    public int process();
+    public double process();
     public Operator take(Object operator);
-    public Operator next();
+    public Operator next(Object operator);
 
 }

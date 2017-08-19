@@ -11,7 +11,7 @@ import br.com.matheuscastiglioni.mcalc.type.Operator;
 public abstract class OperatorFactory {
 
     public static Operator findOperatorTo(Operator left, Operator right, Object operator) {
-        return new Number(0);
+        return new Sum(left, right).take(operator);
     }
 
 }

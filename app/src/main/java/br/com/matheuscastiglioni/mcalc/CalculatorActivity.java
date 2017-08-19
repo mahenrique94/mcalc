@@ -68,7 +68,8 @@ public class CalculatorActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnCalculator_equals)
     public void operate(Button btn) {
-        CalculatorEngine.process(this.textViewResult.getText());
+        if (CalculatorValidator.checkResultHasNumber(this.textViewResult))
+            CalculatorView.setResult(this.textViewResult, CalculatorEngine.process(this.textViewResult.getText()));
     }
 
 }
